@@ -9,6 +9,9 @@ import com.medilab.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 @Service
 public class PatientServiceImpl implements PatientService {
 
@@ -24,5 +27,19 @@ public class PatientServiceImpl implements PatientService {
         patientRepository.save(patientEntity);
         return patientEntity;
 
+    }
+
+    @Override
+    public ArrayList<Patient> retrievePatient() {
+        ArrayList<Patient> List = new ArrayList<>();
+        Iterable<PatientEntity> allPatients = patientRepository.findAll();
+        Iterator<PatientEntity> iterator = allPatients.iterator();
+
+        while (iterator.hasNext()) {
+            PatientEntity entity = iterator.next();
+            Patient patient = mapper.convertValue(entity, Patient.class);
+            List.add(patient);
+        }
+        return List;
     }
 }

@@ -12,8 +12,10 @@ public class PatientEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     private String name;
     private String age;
+    private String nic;
     private String gender;
     private String contactNumber;
     private String email;
