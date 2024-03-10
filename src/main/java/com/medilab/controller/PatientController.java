@@ -4,27 +4,40 @@ import com.medilab.entity.PatientEntity;
 import com.medilab.model.Patient;
 import com.medilab.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Map;
 
 @RestController
+@RequestMapping("/patient")
 public class PatientController {
 
     @Autowired
     PatientService patientService;
 
-    @PostMapping("/addpatient")
+    @PostMapping("/add")
     public PatientEntity addPatient(@RequestBody Patient patient){
         return patientService.createPatient(patient);
     }
 
-    @GetMapping("/getpatient")
+    @GetMapping("/get")
     ArrayList<Patient> getPatient(){
         return patientService.retrievePatient();
+    }
+
+    @DeleteMapping("/{id}")
+    Map<String, String> deletePatient(@PathVariable int id){
+        boolean isRemoved = patientService.removePatient(id);
+        if (isRemoved){
+        return Collections.singletonMap("Status","Patient Removed");
+
+    } else {
+            return Collections.singletonMap("Status","Patient Removed Failed");
+
+
+        }
     }
 
 

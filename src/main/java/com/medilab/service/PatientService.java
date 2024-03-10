@@ -11,5 +11,7 @@ public interface PatientService {
 
     ArrayList<Patient> retrievePatient();
 
+    boolean removePatient(int id);
+
 
 }

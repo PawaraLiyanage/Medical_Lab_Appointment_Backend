@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Optional;
 
 @Service
 public class PatientServiceImpl implements PatientService {
@@ -41,5 +42,15 @@ public class PatientServiceImpl implements PatientService {
             List.add(patient);
         }
         return List;
+    }
+
+    @Override
+    public boolean removePatient(int id) {
+        Optional<PatientEntity> patientEntityOptional = patientRepository.findById(id);
+        if(patientEntityOptional.isPresent()){
+            patientRepository.deleteById(id);
+            return true;
+    }
+        return false;
     }
 }

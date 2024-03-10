@@ -4,22 +4,16 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name="Patient")
+@Table(name="Doctor")
 @Data
-
-//Create Patient Entity
-public class PatientEntity {
+public class DoctorEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private String name;
-    private String age;
-    private String nic;
-    private String gender;
+    private String specialization;
     private String contactNumber;
-    private String email;
-    private String address;
 
 }
