@@ -11,8 +11,8 @@ import lombok.Data;
 public class PatientEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id ;
 
     private String name;
     private String age;

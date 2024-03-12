@@ -11,7 +11,10 @@ public interface PatientService {
 
     ArrayList<Patient> retrievePatient();
 
-    boolean removePatient(int id);
+    public boolean removePatient(int id);
+
+
+
 
 
 }

@@ -3,6 +3,7 @@ package com.medilab.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.medilab.entity.PatientEntity;
+import com.medilab.exception.ResourceNotFoundException;
 import com.medilab.model.Patient;
 import com.medilab.repository.PatientRepository;
 import com.medilab.service.PatientService;
@@ -50,7 +51,11 @@ public class PatientServiceImpl implements PatientService {
         if(patientEntityOptional.isPresent()){
             patientRepository.deleteById(id);
             return true;
-    }
+        }
         return false;
     }
+
+
+
+
 }
