@@ -8,6 +8,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { LabTestsComponent } from './pages/lab-tests/lab-tests.component';
 import { BookAppointmentComponent } from './pages/book-appointment/book-appointment.component';
+import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -20,10 +24,13 @@ import { BookAppointmentComponent } from './pages/book-appointment/book-appointm
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+    
+    
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
