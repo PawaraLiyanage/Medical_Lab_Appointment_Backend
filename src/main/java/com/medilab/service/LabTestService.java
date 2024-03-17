@@ -11,6 +11,7 @@ public interface LabTestService {
 
     ArrayList<LabTest> viewLabTest();
 
+    LabTest findByTestName(String testName);
 
 
 }

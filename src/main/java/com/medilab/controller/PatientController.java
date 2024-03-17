@@ -15,6 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/patient")
+@CrossOrigin
 public class PatientController {
 
     @Autowired
@@ -38,9 +39,7 @@ public class PatientController {
 
         } else {
             return Collections.singletonMap("Status", "Patient ID not found");
-
-
         }
-
     }
+
 }

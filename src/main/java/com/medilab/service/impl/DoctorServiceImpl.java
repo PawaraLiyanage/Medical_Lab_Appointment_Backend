@@ -2,6 +2,7 @@ package com.medilab.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.medilab.entity.DoctorEntity;
+import com.medilab.entity.PatientEntity;
 import com.medilab.model.Doctor;
 import com.medilab.repository.DoctorRepository;
 import com.medilab.service.DoctorService;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Optional;
 
 public class DoctorServiceImpl implements DoctorService {
     @Autowired
@@ -37,6 +39,16 @@ public class DoctorServiceImpl implements DoctorService {
             List.add(doctor);
         }
         return List;
+    }
+
+    @Override
+    public boolean removeDoctor(int id) {
+        Optional<DoctorEntity> doctorEntityOptional = doctorRepository.findById(id);
+        if(doctorEntityOptional.isPresent()){
+            doctorRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
 }

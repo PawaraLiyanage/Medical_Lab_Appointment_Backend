@@ -12,4 +12,6 @@ public interface DoctorService {
 
     ArrayList<Doctor> viewDoctor();
 
+    boolean removeDoctor(int id);
+
 }

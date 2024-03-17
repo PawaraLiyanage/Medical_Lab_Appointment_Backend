@@ -40,7 +40,14 @@ public class LabTestServiceImpl implements LabTestService {
         }
         return List;
     }
+
+    @Override
+    public LabTest findByTestName(String testName) {
+        return mapper.convertValue(labTestRepository.findByTestName(testName),LabTest.class);
+    }
 }
+
+
 
 
 

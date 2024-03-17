@@ -26,7 +26,10 @@ public class LabTestController {
         return labTestService.viewLabTest();
     }
 
-
+    @GetMapping("/find-by-test-name/{testName}")
+    public LabTest findByTestName(@PathVariable String testName){
+        return labTestService.findByTestName(testName);
+    }
 
 
 }
