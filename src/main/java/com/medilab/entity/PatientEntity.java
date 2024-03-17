@@ -20,6 +20,6 @@ public class PatientEntity {
     private String gender;
     private String contactNumber;
     private String email;
-    private String address;
+    private String city;
 
 }

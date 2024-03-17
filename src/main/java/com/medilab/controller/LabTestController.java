@@ -4,13 +4,13 @@ import com.medilab.entity.LabTestEntity;
 import com.medilab.model.LabTest;
 import com.medilab.service.LabTestService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/labtest")
+@CrossOrigin
 public class LabTestController {
 
     @Autowired
@@ -20,4 +20,13 @@ public class LabTestController {
     public LabTestEntity addLabTest(@RequestBody LabTest labTest) {
         return labTestService.createLabTest(labTest);
     }
+
+    @GetMapping("/get")
+    ArrayList<LabTest> getLabTest() {
+        return labTestService.viewLabTest();
+    }
+
+
+
+
 }

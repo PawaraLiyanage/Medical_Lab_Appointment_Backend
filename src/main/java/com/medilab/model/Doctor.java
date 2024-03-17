@@ -1,6 +1,5 @@
 package com.medilab.model;
 
-
 import lombok.*;
 
 @Data
@@ -10,15 +9,10 @@ import lombok.*;
 @Setter
 @ToString
 @Builder
-public class Patient {
+public class Doctor {
+
     private int id;
     private String name;
-    private String age;
-    private String nic;
-    private String gender;
+    private String specialization;
     private String contactNumber;
-    private String email;
-    private String city;
-
-
 }
