@@ -19,6 +19,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {MatButtonModule} from '@angular/material/button';
     LabTestsComponent,
     BookAppointmentComponent,
     ContactUsComponent,
-    AboutComponent
+    AboutComponent,
+    LoginPageComponent
   ],
   
   imports: [

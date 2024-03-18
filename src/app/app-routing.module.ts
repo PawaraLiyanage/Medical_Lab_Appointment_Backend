@@ -5,6 +5,7 @@ import { LabTestsComponent } from './pages/lab-tests/lab-tests.component';
 import { BookAppointmentComponent } from './pages/book-appointment/book-appointment.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AboutComponent } from './pages/about/about.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path:"about",
     component:AboutComponent
+  },
+  {
+    path:"login-page",
+    component:LoginPageComponent
   }
 ];
 

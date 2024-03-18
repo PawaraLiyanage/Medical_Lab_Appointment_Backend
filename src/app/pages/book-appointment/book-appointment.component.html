@@ -10,10 +10,21 @@
         </option>
     </select>
   </div> 
+  <br>
+  <div class="col-sm-10">
+    <label for="formGroupExampleInput" class="form-label">Doctor who recomanded the test</label>
+    <select class="form-select" aria-label="Select the Doctor">
+        <option>--Select the Doctor--</option>
+        <!-- <option *ngFor="let test of labTest">
+            {{test.testName+"   "+"Rs."+(test.testCost)}}
+        </option> -->
+    </select>
+  </div> 
   <!-- <div class="mb-3">
     <label for="formGroupExampleInput" class="form-label">Test Cost</label>
     <input type="text" class="form-control" [(ngModel)]="labTest.testCost" placeholder="Cost">
   </div> -->
+  <br>
   <div class="mb-3">
     <label for="formGroupExampleInput" class="form-label">Full Name</label>
     <input type="text" class="form-control" [(ngModel)]="patient.name" placeholder="Enter Your Name">
