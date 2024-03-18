@@ -7,11 +7,12 @@ import com.medilab.model.Doctor;
 import com.medilab.repository.DoctorRepository;
 import com.medilab.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Optional;
-
+@Service
 public class DoctorServiceImpl implements DoctorService {
     @Autowired
     DoctorRepository doctorRepository;
@@ -28,7 +29,7 @@ public class DoctorServiceImpl implements DoctorService {
     }
 
     @Override
-    public ArrayList<Doctor> viewDoctor() {
+    public ArrayList<Doctor> retrieveDoctor() {
         ArrayList<Doctor> List = new ArrayList<>();
         Iterable<DoctorEntity> allDoctor = doctorRepository.findAll();
         Iterator<DoctorEntity> iterator = allDoctor.iterator();

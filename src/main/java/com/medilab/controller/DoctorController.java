@@ -1,9 +1,7 @@
 package com.medilab.controller;
 
 import com.medilab.entity.DoctorEntity;
-import com.medilab.entity.PatientEntity;
 import com.medilab.model.Doctor;
-import com.medilab.model.Patient;
 import com.medilab.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +25,7 @@ public class DoctorController {
 
     @GetMapping("/get")
     ArrayList<Doctor> getDoctor() {
-        return doctorService.viewDoctor();
+        return doctorService.retrieveDoctor();
     }
 
     @DeleteMapping("{id}")

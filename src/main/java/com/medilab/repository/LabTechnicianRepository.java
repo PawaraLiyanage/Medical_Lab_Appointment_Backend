@@ -1,4 +1,8 @@
 package com.medilab.repository;
 
-public interface LabTechnicianRepository {
+import com.medilab.entity.LabTechnicianEntity;
+import org.springframework.data.repository.CrudRepository;
+
+public interface LabTechnicianRepository extends CrudRepository<LabTechnicianEntity,Integer> {
+
 }

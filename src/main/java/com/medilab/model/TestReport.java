@@ -18,7 +18,7 @@ public class TestReport {
     private String patientEmail;
 
 
-    //Upload Test Result pdf
+    //Upload Test Result pdf or generate report
     //private BlobJavaType
 
 
