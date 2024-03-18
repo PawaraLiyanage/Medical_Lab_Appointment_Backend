@@ -1,6 +1,46 @@
-<select class="form-select" aria-label="Default select example">
-    <option selected>Open This to select a test</option>
-    <option value="1">One</option>
-    <option value="2">Two</option>
-    <option value="3">Three</option>
-  </select>
+
+
+
+  <div class="col-sm-10">
+    <label for="formGroupExampleInput" class="form-label">Select A Test</label>
+    <select class="form-select" aria-label="Default select example">
+        <option>--Select A Test--</option>
+        <option *ngFor="let test of labTest">
+            {{test.testName+"   "+"Rs."+(test.testCost)}}
+        </option>
+    </select>
+  </div> 
+  <!-- <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Test Cost</label>
+    <input type="text" class="form-control" [(ngModel)]="labTest.testCost" placeholder="Cost">
+  </div> -->
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Full Name</label>
+    <input type="text" class="form-control" [(ngModel)]="patient.name" placeholder="Enter Your Name">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Contact Number</label>
+    <input type="text" class="form-control" [(ngModel)]="patient.contactNumber" placeholder="Enter Your Mobile Number">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Email Address</label>
+    <input type="text" class="form-control" [(ngModel)]="patient.email" placeholder="Enter Your email address">
+  </div>
+<br>
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" (dateChange)="dateChanged($event)">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-stroked-button (click)="picker.open()">Pick A Date</button>
+</div>
+ 
+
+<br>
+  
+  <div>
+    <button (click)="createPatient()"  class="btn btn-primary">Submit & Payment</button>
+  </div>
+  

@@ -10,7 +10,15 @@ import { LabTestsComponent } from './pages/lab-tests/lab-tests.component';
 import { BookAppointmentComponent } from './pages/book-appointment/book-appointment.component';
 import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withFetch } from '@angular/common/http';
-
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { AboutComponent } from './pages/about/about.component';
+import { FormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -20,13 +28,23 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     HomeComponent,
     FooterComponent,
     LabTestsComponent,
-    BookAppointmentComponent
+    BookAppointmentComponent,
+    ContactUsComponent,
+    AboutComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-    
+    HttpClientModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
+    MatButtonModule
+
     
   ],
   providers: [
