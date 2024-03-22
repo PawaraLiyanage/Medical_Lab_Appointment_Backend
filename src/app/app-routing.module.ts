@@ -8,6 +8,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { PayementComponent } from './pages/payement/payement.component';
 import { PayByCardComponent } from './pages/pay-by-card/pay-by-card.component';
+import { LabTechComponent } from './pages/lab-tech/lab-tech.component';
+import { LoginLabTechComponent } from './pages/login-lab-tech/login-lab-tech.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path:"pay-by-card",
     component:PayByCardComponent
+  },
+  {
+    path:"lab-tech",
+    component:LabTechComponent
+  },
+  {
+    path:"login-lab-tech",
+    component:LoginLabTechComponent
   }
 ];
 

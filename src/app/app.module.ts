@@ -22,6 +22,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { PayementComponent } from './pages/payement/payement.component';
 import { PayByCardComponent } from './pages/pay-by-card/pay-by-card.component';
+import { LabTechComponent } from './pages/lab-tech/lab-tech.component';
+import { LoginLabTechComponent } from './pages/login-lab-tech/login-lab-tech.component';
 
 
 @NgModule({
@@ -36,7 +38,9 @@ import { PayByCardComponent } from './pages/pay-by-card/pay-by-card.component';
     AboutComponent,
     LoginPageComponent,
     PayementComponent,
-    PayByCardComponent
+    PayByCardComponent,
+    LabTechComponent,
+    LoginLabTechComponent
   ],
   
   imports: [
