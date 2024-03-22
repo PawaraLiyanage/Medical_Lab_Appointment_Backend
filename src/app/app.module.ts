@@ -20,6 +20,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { PayementComponent } from './pages/payement/payement.component';
+import { PayByCardComponent } from './pages/pay-by-card/pay-by-card.component';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     BookAppointmentComponent,
     ContactUsComponent,
     AboutComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    PayementComponent,
+    PayByCardComponent
   ],
   
   imports: [

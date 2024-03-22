@@ -6,6 +6,8 @@ import { BookAppointmentComponent } from './pages/book-appointment/book-appointm
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { AboutComponent } from './pages/about/about.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { PayementComponent } from './pages/payement/payement.component';
+import { PayByCardComponent } from './pages/pay-by-card/pay-by-card.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,14 @@ const routes: Routes = [
   {
     path:"login-page",
     component:LoginPageComponent
+  },
+  {
+    path:"payment",
+    component:PayementComponent
+  },
+  {
+    path:"pay-by-card",
+    component:PayByCardComponent
   }
 ];
 
