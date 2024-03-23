@@ -17,75 +17,99 @@ import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-
 import { LoginAdminComponent } from './pages/login-admin/login-admin.component';
 import { LoginDoctorComponent } from './pages/login-doctor/login-doctor.component';
 import { LoginPatientComponent } from './pages/login-patient/login-patient.component';
+import { SignUpAdminComponent } from './pages/sign-up-admin/sign-up-admin.component';
+import { SignUpDoctorComponent } from './pages/sign-up-doctor/sign-up-doctor.component';
+import { SignUpLabTechComponent } from './pages/sign-up-lab-tech/sign-up-lab-tech.component';
+import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
   {
-    path:'',
-    component:HomeComponent
+    path: '',
+    component: HomeComponent
   },
   {
-    path:"lab-tests",
-    component:LabTestsComponent
+    path: "lab-tests",
+    component: LabTestsComponent
   },
   {
-    path:"book-appointment",
-    component:BookAppointmentComponent
+    path: "book-appointment",
+    component: BookAppointmentComponent
   },
   {
-    path:"Contact-Us",
-    component:ContactUsComponent
+    path: "Contact-Us",
+    component: ContactUsComponent
   },
   {
-    path:"about",
-    component:AboutComponent
+    path: "about",
+    component: AboutComponent
   },
   {
-    path:"login-page",
-    component:LoginPageComponent
+    path: "login-page",
+    component: LoginPageComponent
   },
   {
-    path:"payment",
-    component:PayementComponent
+    path: "payment",
+    component: PayementComponent
   },
   {
-    path:"pay-by-card",
-    component:PayByCardComponent
+    path: "pay-by-card",
+    component: PayByCardComponent
   },
   {
-    path:"lab-tech",
-    component:LabTechComponent
+    path: "lab-tech",
+    component: LabTechComponent
   },
   {
-    path:"login-lab-tech",
-    component:LoginLabTechComponent
+    path: "login-lab-tech",
+    component: LoginLabTechComponent
   },
   {
-    path:"sign-up",
-    component:SignUpComponent
+    path: "sign-up",
+    component: SignUpComponent
   },
   {
-    path:"report-generate",
-    component:ReportGenerateComponent
+    path: "report-generate",
+    component: ReportGenerateComponent
   },
   {
-    path:"privacy-policy",
-    component:PrivacyPolicyComponent
+    path: "privacy-policy",
+    component: PrivacyPolicyComponent
   },
   {
-    path:"terms-and-conditions",
-    component:TermsAndConditionsComponent
+    path: "terms-and-conditions",
+    component: TermsAndConditionsComponent
   },
   {
-    path:"login-admin",
-    component:LoginAdminComponent
+    path: "login-admin",
+    component: LoginAdminComponent
   },
   {
-    path:"login-doctor",
-    component:LoginDoctorComponent
+    path: "login-doctor",
+    component: LoginDoctorComponent
   },
   {
-    path:"login-patient",
-    component:LoginPatientComponent
+    path: "login-patient",
+    component: LoginPatientComponent
+  },
+  {
+    path: "sign-up-admin",
+    component: SignUpAdminComponent
+  },
+  {
+    path: "sign-up-doctor",
+    component: SignUpDoctorComponent
+  },
+  {
+    path: "sign-up-lab-tech",
+    component: SignUpLabTechComponent
+  },
+  {
+    path: "sign-up-patient",
+    component: SignUpLabTechComponent
+  },
+  {
+    path: "admin-dashboard",
+    component: AdminDashboardComponent
   },
 ];
 
