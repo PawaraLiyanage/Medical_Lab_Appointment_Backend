@@ -1,0 +1,38 @@
+<div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label" class="fw-medium">Lab Technician Name</label>
+    <input type="text" class="form-control" placeholder="Enter Your Name">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label" class="fw-medium">Patient Name</label>
+    <input type="text" class="form-control" placeholder="Enter Patient's Name">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label" class="fw-medium">Test Recomanded Doctor</label>
+    <input type="text" class="form-control" placeholder="Enter Doctor's Name">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label" class="fw-medium">Select The Lab Test</label>
+    <select class="form-select" aria-label="Default select example">
+      <option>--Select A Test--</option>
+      <option *ngFor="let test of labTest">
+        {{test.testName}}
+      </option>
+    </select>
+  </div>
+  <div class="mb-3"> 
+  <label for="formGroupExampleInput" class="form-label" class="fw-medium">Select Test Result</label>
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Open this select menu</option>
+    <option value="1">Positive</option>
+    <option value="2">Negetive</option>
+    <option value="3">Good</option>
+    <option value="4">Bad</option>
+  </select>
+</div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label" class="fw-medium">Patient's Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div>
+    <button class="btn btn-primary" >Generate TestResult Report</button>
+  </div>

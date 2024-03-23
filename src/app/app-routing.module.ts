@@ -10,6 +10,13 @@ import { PayementComponent } from './pages/payement/payement.component';
 import { PayByCardComponent } from './pages/pay-by-card/pay-by-card.component';
 import { LabTechComponent } from './pages/lab-tech/lab-tech.component';
 import { LoginLabTechComponent } from './pages/login-lab-tech/login-lab-tech.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { ReportGenerateComponent } from './pages/report-generate/report-generate.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
+import { LoginAdminComponent } from './pages/login-admin/login-admin.component';
+import { LoginDoctorComponent } from './pages/login-doctor/login-doctor.component';
+import { LoginPatientComponent } from './pages/login-patient/login-patient.component';
 
 const routes: Routes = [
   {
@@ -51,7 +58,35 @@ const routes: Routes = [
   {
     path:"login-lab-tech",
     component:LoginLabTechComponent
-  }
+  },
+  {
+    path:"sign-up",
+    component:SignUpComponent
+  },
+  {
+    path:"report-generate",
+    component:ReportGenerateComponent
+  },
+  {
+    path:"privacy-policy",
+    component:PrivacyPolicyComponent
+  },
+  {
+    path:"terms-and-conditions",
+    component:TermsAndConditionsComponent
+  },
+  {
+    path:"login-admin",
+    component:LoginAdminComponent
+  },
+  {
+    path:"login-doctor",
+    component:LoginDoctorComponent
+  },
+  {
+    path:"login-patient",
+    component:LoginPatientComponent
+  },
 ];
 
 @NgModule({

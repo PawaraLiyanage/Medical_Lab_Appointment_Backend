@@ -24,6 +24,17 @@ import { PayementComponent } from './pages/payement/payement.component';
 import { PayByCardComponent } from './pages/pay-by-card/pay-by-card.component';
 import { LabTechComponent } from './pages/lab-tech/lab-tech.component';
 import { LoginLabTechComponent } from './pages/login-lab-tech/login-lab-tech.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { ReportGenerateComponent } from './pages/report-generate/report-generate.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
+import { LoginDoctorComponent } from './pages/login-doctor/login-doctor.component';
+import { LoginAdminComponent } from './pages/login-admin/login-admin.component';
+import { LoginPatientComponent } from './pages/login-patient/login-patient.component';
+import { SignUpPatientComponent } from './pages/sign-up-patient/sign-up-patient.component';
+import { SignUpDoctorComponent } from './pages/sign-up-doctor/sign-up-doctor.component';
+import { SignUpLabTechComponent } from './pages/sign-up-lab-tech/sign-up-lab-tech.component';
+import { SignUpAdminComponent } from './pages/sign-up-admin/sign-up-admin.component';
 
 
 @NgModule({
@@ -40,7 +51,18 @@ import { LoginLabTechComponent } from './pages/login-lab-tech/login-lab-tech.com
     PayementComponent,
     PayByCardComponent,
     LabTechComponent,
-    LoginLabTechComponent
+    LoginLabTechComponent,
+    SignUpComponent,
+    ReportGenerateComponent,
+    PrivacyPolicyComponent,
+    TermsAndConditionsComponent,
+    LoginDoctorComponent,
+    LoginAdminComponent,
+    LoginPatientComponent,
+    SignUpPatientComponent,
+    SignUpDoctorComponent,
+    SignUpLabTechComponent,
+    SignUpAdminComponent
   ],
   
   imports: [
