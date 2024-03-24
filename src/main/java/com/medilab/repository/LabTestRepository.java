@@ -4,6 +4,6 @@ import com.medilab.entity.LabTestEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-public interface LabTestRepository extends JpaRepository<LabTestEntity, String> {
+public interface LabTestRepository extends JpaRepository<LabTestEntity, Integer > {
     public LabTestEntity findByTestName(String testName);
 }

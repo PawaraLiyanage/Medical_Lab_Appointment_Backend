@@ -13,5 +13,7 @@ public interface LabTestService {
 
     LabTest findByTestName(String testName);
 
+    boolean deleteLabTest(int id);
+
 
 }

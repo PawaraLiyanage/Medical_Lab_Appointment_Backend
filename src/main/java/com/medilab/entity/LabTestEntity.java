@@ -10,7 +10,7 @@ public class LabTestEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id ;
+    private Integer id ;
 
     private String testName;
     private String testCost;

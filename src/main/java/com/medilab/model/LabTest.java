@@ -11,7 +11,7 @@ import lombok.*;
 @Builder
 
 public class LabTest {
-    private  int id;
+    private  Integer id;
     private String testName;
     private String testCost;
 

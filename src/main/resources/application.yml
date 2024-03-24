@@ -4,6 +4,18 @@ spring:
     username: root
     password: 1234
 
+  mail:
+    host: smtp.gmail.com
+    username: pawaraliyanage@gmail.com
+    password: cvpc ccmv thxd offushow
+    port: 587
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+          auth: true
+
 
 
   jpa:

@@ -45,6 +45,18 @@ public class LabTestServiceImpl implements LabTestService {
     public LabTest findByTestName(String testName) {
         return mapper.convertValue(labTestRepository.findByTestName(testName),LabTest.class);
     }
+
+    @Override
+    public boolean deleteLabTest(int id) {
+        if(labTestRepository.existsById(id)){
+            labTestRepository.deleteById(id);
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+
 }
 
 
