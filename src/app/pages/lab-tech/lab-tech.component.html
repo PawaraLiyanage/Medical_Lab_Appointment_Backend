@@ -1,14 +1,14 @@
   <div class="mb-3">
     <label for="formGroupExampleInput" class="form-label" class="fw-medium">Lab Technician Name</label>
-    <input type="text" class="form-control" placeholder="Enter Your Name">
+    <input type="text" class="form-control"  [(ngModel)]="email.labTechnicianName" placeholder="Enter Your Name">
   </div>
   <div class="mb-3">
     <label for="formGroupExampleInput" class="form-label" class="fw-medium">Patient Name</label>
-    <input type="text" class="form-control" placeholder="Enter Patient's Name">
+    <input type="text" class="form-control" [(ngModel)]="email.patientName" placeholder="Enter Patient's Name">
   </div>
   <div class="mb-3">
     <label for="formGroupExampleInput" class="form-label" class="fw-medium">Test Recomanded Doctor</label>
-    <input type="text" class="form-control" placeholder="Enter Doctor's Name">
+    <input type="text" class="form-control"  placeholder="Enter Doctor's Name">
   </div>
   <div class="mb-3">
     <label for="formGroupExampleInput" class="form-label" class="fw-medium">Select The Lab Test</label>
@@ -34,5 +34,5 @@
     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
   </div>
   <div>
-    <button class="btn btn-primary" >Email TestResult To The Patient</button>
+    <button  class="btn btn-primary"  >Email TestResult To The Patient</button>
   </div>

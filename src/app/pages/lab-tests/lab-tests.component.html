@@ -1,28 +1,26 @@
-
-
 <div class="container">
     <div class="row">
         <div class="col-12">
-               <div class="bd-example">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Test ID</th>
-                    <th scope="col">Test Name</th>
-                    <th scope="col">Test Cost</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let test of labTest">
-                    <td>{{test.id}}</td>
-                    <td>{{test.testName}}</td>
-                    <td>{{test.testCost}}</td>
-                    <td><button routerLink="/book-appointment" type="button" class="btn btn-primary">Book A Test</button></td>
-                </tr>
-            </tbody>
-    
-        </table>
-    </div>
-</div>
+            <div class="bd-example">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Test ID</th>
+                            <th scope="col">Test Name</th>
+                            <th scope="col">Test Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let test of labTest">
+                            <td>{{test.id}}</td>
+                            <td>{{test.testName}}</td>
+                            <td>{{test.testCost}}</td>
+                            <td><button routerLink="/book-appointment" type="button" class="btn btn-primary">Book A
+                                    Test</button></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
         </div>
- 
+    </div>

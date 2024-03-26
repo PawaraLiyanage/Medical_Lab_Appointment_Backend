@@ -21,6 +21,8 @@ import { SignUpAdminComponent } from './pages/sign-up-admin/sign-up-admin.compon
 import { SignUpDoctorComponent } from './pages/sign-up-doctor/sign-up-doctor.component';
 import { SignUpLabTechComponent } from './pages/sign-up-lab-tech/sign-up-lab-tech.component';
 import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
+import { ManageLabTestsComponent } from './pages/manage-lab-tests/manage-lab-tests.component';
+import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
 
 const routes: Routes = [
   {
@@ -111,6 +113,15 @@ const routes: Routes = [
     path: "admin-dashboard",
     component: AdminDashboardComponent
   },
+  {
+    path: "manage-lab-tests",
+    component: ManageLabTestsComponent
+  },
+  {
+    path: "patient-dashboard",
+    component: PatientDashboardComponent
+  },
+
 ];
 
 @NgModule({

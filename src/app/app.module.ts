@@ -36,6 +36,8 @@ import { SignUpDoctorComponent } from './pages/sign-up-doctor/sign-up-doctor.com
 import { SignUpLabTechComponent } from './pages/sign-up-lab-tech/sign-up-lab-tech.component';
 import { SignUpAdminComponent } from './pages/sign-up-admin/sign-up-admin.component';
 import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
+import { ManageLabTestsComponent } from './pages/manage-lab-tests/manage-lab-tests.component';
+import { PatientDashboardComponent } from './pages/patient-dashboard/patient-dashboard.component';
 
 
 @NgModule({
@@ -64,7 +66,9 @@ import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard
     SignUpDoctorComponent,
     SignUpLabTechComponent,
     SignUpAdminComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    ManageLabTestsComponent,
+    PatientDashboardComponent
   ],
   
   imports: [

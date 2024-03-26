@@ -1,0 +1,124 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="bd-example">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Test ID</th>
+                            <th scope="col">Test Name</th>
+                            <th scope="col">Test Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let test of labTest">
+                            <td>{{test.id}}</td>
+                            <td>{{test.testName}}</td>
+                            <td>{{test.testCost}}</td>
+                            <td><button (click)="setSelectedTest(test)" data-bs-toggle="modal" data-bs-target="#deleteModal"
+                                class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                            <td><button (click)="setSelectedTest(test)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal"
+                                data-bs-whatever="@getbootstrap"><i class="bi bi-pencil-square"></i></button></td>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-primary">Add a New Test</button>
+
+
+
+   
+
+
+
+    <!-- Modal Delete-->
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="deleteModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="deleteModalLabel">Delete Confirmation</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      Do you want to delete ?
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)=" deleteTest()">Confirm</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Modal Update-->
+
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="updateModalLabel">Update Test</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="mb-3">
+          <label for="recipient-name" class="col-form-label">ID:</label>
+          <input type="text" value="{{selectedTest?.id}}" disabled class="form-control" id="recipient-name">
+        </div>
+        <!-- <div class="mb-3">
+          <label for="recipient-name" class="col-form-label">ISBN:</label>
+          <input type="text" value="{{selectedBook?.isbn}}" disabled class="form-control" id="recipient-name">
+        </div> -->
+        <div class="mb-3">
+          <label for="recipient-name" class="col-form-label">Test Name:</label>
+          <input type="text" [(ngModel)]="selectedTest && selectedTest.testName" [ngModelOptions]="{standalone:true}" class="form-control" id="recipient-name">
+        </div>
+        <div class="mb-3">
+            <label for="recipient-name" class="col-form-label">Test Cost:</label>
+            <input type="text" [(ngModel)]="selectedTest && selectedTest.testCost" [ngModelOptions]="{standalone:true}" class="form-control" id="recipient-name">
+          </div>
+        <!-- <div class="mb-3">
+          <label for="recipient-name" class="col-form-label">Category:</label>
+          <input type="text" [(ngModel)]="selectedBook && selectedBook.category" [ngModelOptions]="{standalone:true}" class="form-control" id="recipient-name">
+        </div>
+        <div class="mb-3">
+          <label for="recipient-name" class="col-form-label">QTY:</label>
+          <input type="number" [(ngModel)]="selectedBook && selectedBook.qty" [ngModelOptions]="{standalone:true}" class="form-control" id="recipient-name">
+        </div> -->
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#updateConfirmationModal">Update</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Modal Update Confirmation-->
+
+<div class="modal fade" id="updateConfirmationModal" tabindex="-1" aria-labelledby="updateConfirmationModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h1 class="modal-title fs-5" id="updateConfirmationModalLabel">Update Test</h1>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      Do you want to update Test ?
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="saveTest()">Confirm</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
